@@ -1,14 +1,14 @@
 {
   "name": "efml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add many programming features to HTML",
   "main": "dist/efml.min.js",
   "module": "src/efml.js",
   "types": "types/index.d.ts",
   "files": [
-    "dist/",
-    "src/",
-    "types/",
+    "dist",
+    "src",
+    "types",
     "README.md",
     "README-CN.md",
     "LICENSE"
@@ -41,7 +41,7 @@
   "homepage": "https://github.com/Resornesy/EFML#README",
   "devDependencies": {
     "terser": "^5.31.0",
-    "markdown-toc": "^1.2.3",
+    "markdown-toc": "latest",
     "rimraf": "^5.0.5"
   }
 }
