@@ -39,7 +39,7 @@
 ## 快速上手
 
 ```bash
-npm i EFML
+npm i efml
 ```
 
 ```html
