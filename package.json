@@ -1,0 +1,47 @@
+{
+  "name": "efml",
+  "version": "1.0.0",
+  "description": "Add many programming features to HTML",
+  "main": "dist/efml.min.js",
+  "module": "src/efml.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist/",
+    "src/",
+    "types/",
+    "README.md",
+    "README-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "toc": "markdown-toc -i README.md",
+    "toc:check": "markdown-toc -i README.md && git diff --exit-code README.md",
+    "build": "npm run build:clean && npm run build:min",
+    "build:clean": "rimraf dist",
+    "build:min": "terser src/efml.js -c passes=2 -m reserved=['globalStore','updateContent','safeEval','parseValue','escapeHtml','executeStatement','setGlobalVar'] -o dist/efml.min.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "browser",
+    "html",
+    "extend",
+    "template-engine",
+    "custom-elements",
+    "declarative"
+  ],
+  "author": "Resornesy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Resornesy/EFML.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Resornesy/EFML/issues"
+  },
+  "homepage": "https://github.com/Resornesy/EFML#README",
+  "devDependencies": {
+    "terser": "^5.31.0",
+    "markdown-toc": "^1.2.3",
+    "rimraf": "^5.0.5"
+  }
+}
